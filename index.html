@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabium — Aulas a un clic</title>
+<meta name="description" content="Sabium es la plataforma de gestión pedagógica que centraliza la planificación de tu institución: calendarización automática, monitoreo en tiempo real y métricas pedagógicas.">
+<link rel="icon" href="assets/img/isotipo.png">
+<link href="assets/vendor/bootstrap/bootstrap.scoped.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- Header / navigation                                           -->
+<!-- ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-inner">
+    <a href="#inicio" class="nav-logo" aria-label="Sabium, inicio">
+      <img src="assets/img/isotipo.png" alt="Sabium isotipo">
+    </a>
+
+    <nav class="nav-pills" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#por-que">¿Por qué elegir Sabium?</a>
+      <a href="#comunidad">Comunidad Educativa</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contacto" target="_blank" rel="noopener">
+        Contáctenos
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Cerrar menú">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#inicio">Inicio</a>
+  <a href="#por-que">¿Por qué elegir Sabium?</a>
+  <a href="#comunidad">Comunidad Educativa</a>
+  <a href="#quienes-somos">Quiénes somos</a>
+  <a class="btn btn-on-navy" href="https://wa.me/5491170668346?text=Hola%20Sabium%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener">
+    Hablemos por WhatsApp
+  </a>
+</div>
+
+<main>
+
+<!-- ============================================================ -->
+<!-- Hero                                                          -->
+<!-- ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy" data-reveal>
+      <span class="eyebrow">Gestión pedagógica institucional</span>
+      <h1>Cada aula, <span class="hl">visible</span> en tiempo real.</h1>
+      <p class="lede">Sabium centraliza la planificación de tu institución: qué se enseña, cuándo y con qué avance, sin carpetas ni mensajes sueltos.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/5491170668346?text=Hola%20Sabium%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener">
+          Ver Sabium en vivo
+        </a>
+        <a class="btn btn-outline" href="#por-que">
+          Ver cómo funciona
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><b>0</b><span>documentos sueltos que perseguir</span></div>
+        <div class="hero-stat"><b class="count-up" data-target="100" data-suffix="%">0%</b><span>de la planificación en un mismo lugar</span></div>
+        <div class="hero-stat"><b>Real</b><span>seguimiento del aula, no percepciones</span></div>
+      </div>
+    </div>
+
+   <div class="hero-visual" data-reveal style="--reveal-delay:120ms">
+      <div class="hero-fade-container">
+        <!-- Cara 1: Mockup del dashboard -->
+        <div class="hero-face hero-face-mockup">
+          <picture>
+            <source srcset="assets/img/dashboard-mockup.webp" type="image/webp">
+            <img
+              class="dashboard-shot"
+              src="assets/img/dashboard-mockup.png"
+              alt="Panel del coordinador en Sabium"
+              width="1600" height="1563" loading="eager">
+          </picture>
+        </div>
+
+        <!-- Cara 2: Logo full de Sabium -->
+        <div class="hero-face hero-face-logo">
+          <img
+            class="sabium-full-logo"
+            src="assets/img/logo-full.png"
+            alt="Sabium — aulas a un clic"
+            loading="eager">
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-login-trigger" id="loginTrigger">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+        Ingreso al Sistema
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+  <div class="login-box">
+    <button type="button" class="modal-close" id="loginModalClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="login-box-head">
+      <h2 id="loginModalTitle">Ingreso al Sistema</h2>
+      <p>Accedé a tu panel según tu rol</p>
+    </div>
+    <div class="login-group">
+      <label for="loginDni">DNI</label>
+      <input class="login-field" id="loginDni" type="text" inputmode="numeric" maxlength="8" autocomplete="off">
+    </div>
+    <div class="login-group">
+      <label for="loginPass">Contraseña</label>
+      <div class="login-field-group">
+        <input class="login-field" id="loginPass" type="password" maxlength="50" autocomplete="off">
+        <button type="button" class="login-field-toggle" id="toggleClaveLogin" aria-label="Mostrar u ocultar contraseña" title="Mostrar u ocultar contraseña">
+          <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M10.6 10.6a3 3 0 0 0 4.24 4.24M9.88 4.6A10.4 10.4 0 0 1 12 4.5c6.5 0 10 6.5 10 6.5a17.6 17.6 0 0 1-3.13 3.94M6.6 6.6C4.14 8.2 2 11 2 11s3.5 6.5 10 6.5c1.3 0 2.47-.26 3.5-.68"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="login-group">
+      <label for="loginInst">Institución</label>
+      <select class="login-field" id="loginInst">
+        <option value="" selected>Seleccione su institución</option>
+        <!-- Opciones estáticas para maqueta de diseño: no consultan base de datos -->
+        <option value="demo-1">INSTITUCIÓN DEMO 1</option>
+        <option value="demo-2">INSTITUCIÓN DEMO 2</option>
+        <option value="demo-3">INSTITUCIÓN DEMO 3</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-login-submit">Acceder</button>
+    <a class="login-help" href="https://wa.me/5491170668346?text=Hola%20Sabium%2C%20olvid%C3%A9%20mi%20clave%20de%20acceso." target="_blank" rel="noopener">¿Es su primer acceso u olvidó su clave?</a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Claims band                                                   -->
+<!-- ============================================================ -->
+<section class="claims">
+  <div class="container claims-grid">
+    <div class="claim" data-reveal style="--reveal-delay:0ms">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <p class="claim-title">Calendarización automática</p>
+        <p>Cada planificación se ubica sola en el día y el horario real de la clase, y se reacomoda ante cualquier imprevisto.</p>
+      </div>
+    </div>
+    <div class="claim" data-reveal style="--reveal-delay:90ms">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div>
+        <p class="claim-title">Visibilidad institucional</p>
+        <p>El directivo ve el estado de cada aula desde MONITOREO, sin tener que pedir que se lo cuenten.</p>
+      </div>
+    </div>
+    <div class="claim" data-reveal style="--reveal-delay:180ms">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div>
+        <p class="claim-title">Feedback con historial</p>
+        <p>Los comentarios quedan guardados junto a la clase, con su propio estado: aprobada, observada o rechazada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- Por qué elegir Sabium                                         -->
+<!-- ============================================================ -->
+<section class="why" id="por-que">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow eyebrow-orange"><span class="dot"></span>¿Por qué elegir Sabium?</span>
+      <h2>Cuatro problemas que ya no tenés que resolver a mano.</h2>
+      <p>Reunimos en un solo lugar lo que hoy tu institución arma con carpetas, planillas sueltas y mensajes que se pierden.</p>
+    </div>
+
+    <div class="why-layout">
+      <div class="stack-visual" data-reveal>
+        <div class="stack-block"><span class="num">01</span><span class="lbl">Planificación dispersa</span></div>
+        <div class="stack-block"><span class="num">02</span><span class="lbl">Seguimiento manual</span></div>
+        <div class="stack-block"><span class="num">03</span><span class="lbl">Feedback informal</span></div>
+        <div class="stack-block"><span class="num">04</span><span class="lbl">Decisiones a ciegas</span></div>
+      </div>
+
+      <div class="pairs">
+        <article class="pair-card" data-reveal style="--reveal-delay:0ms">
+          <span class="pair-problem">Planificación dispersa</span>
+          <span class="pair-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="pair-solution">Aulas a un clic</span>
+          <p class="pair-body">Carpetas, PDFs sueltos y borradores en el celular del docente. Sabium arma un único calendario institucional desde el Diseño Curricular Oficial de tu colegio, siempre actualizado.</p>
+        </article>
+
+        <article class="pair-card" data-reveal style="--reveal-delay:80ms">
+          <span class="pair-problem">Seguimiento manual</span>
+          <span class="pair-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="pair-solution">Monitoreo en tiempo real</span>
+          <p class="pair-body">Enterarte de lo que pasó en un aula ya no depende de preguntar. Filtrá por nivel, turno, curso o docente y mirá el estado de cada clase al instante.</p>
+        </article>
+
+        <article class="pair-card" data-reveal style="--reveal-delay:160ms">
+          <span class="pair-problem">Feedback informal</span>
+          <span class="pair-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="pair-solution">Feedback con historial</span>
+          <p class="pair-body">Un comentario suelto se pierde. En Sabium, cada devolución queda guardada junto a la planificación, con estado propio: aprobada, observada o rechazada.</p>
+        </article>
+
+        <article class="pair-card" data-reveal style="--reveal-delay:240ms">
+          <span class="pair-problem">Decisiones a ciegas</span>
+          <span class="pair-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="pair-solution">Métricas pedagógicas</span>
+          <p class="pair-body">Elegir una estrategia sin datos es adivinar. Sabium muestra qué contenidos se trabajaron, con qué frecuencia y qué queda por cubrir.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="why-close" data-reveal>
+      <p>¿Sabium es un costo más, o el <mark>resguardo de todo</mark> lo que tu institución <mark>ya construyó?</mark></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- Comunidad Educativa                                           -->
+<!-- ============================================================ -->
+<section class="community" id="comunidad">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow eyebrow-teal"><span class="dot"></span>Comunidad educativa</span>
+      <h2>Una plataforma, cuatro maneras de mirar la misma aula.</h2>
+      <p>Directivos, coordinadores, docentes y familias parten de la misma información institucional, cada uno desde el lugar que necesita.</p>
+    </div>
+
+    <div class="role-grid">
+      <article class="role-card" data-accent="navy" data-reveal style="--reveal-delay:0ms">
+        <div class="role-card-head">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Directivos</h3>
+        </div>
+        <span class="role-underline" aria-hidden="true"></span>
+        <div class="role-compare">
+          <div class="row before"><span class="tag">ANTES</span><p>Se enteraban de un problema en una reunión, semanas después de que pasara.</p></div>
+          <div class="row after"><span class="tag">CON SABIUM</span><p>Ven el estado de cada aula el mismo día, desde el panel de MONITOREO.</p></div>
+        </div>
+      </article>
+
+      <article class="role-card" data-accent="teal" data-reveal style="--reveal-delay:90ms">
+        <div class="role-card-head">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg>
+          </div>
+          <h3>Coordinadores</h3>
+        </div>
+        <span class="role-underline" aria-hidden="true"></span>
+        <div class="role-compare">
+          <div class="row before"><span class="tag">ANTES</span><p>Las reuniones de equipo se armaban con impresiones sueltas, no con datos.</p></div>
+          <div class="row after"><span class="tag">CON SABIUM</span><p>Llegan con métricas reales: qué se trabajó, qué falta y qué patrón se repite.</p></div>
+        </div>
+      </article>
+
+      <article class="role-card" data-accent="coral" data-reveal style="--reveal-delay:180ms">
+        <div class="role-card-head">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h11a1 1 0 0 1 1 1v14M6.5 22H20a1 1 0 0 0 1-1v-2H6.5a1.5 1.5 0 0 0 0 3z"/></svg>
+          </div>
+          <h3>Docentes</h3>
+        </div>
+        <span class="role-underline" aria-hidden="true"></span>
+        <div class="role-compare">
+          <div class="row before"><span class="tag">ANTES</span><p>Planificaban una vez y volvían a hacerlo entero cuando algo se movía en el calendario.</p></div>
+          <div class="row after"><span class="tag">CON SABIUM</span><p>Arrastran la clase a otro día y el resto de la calendarización se reacomoda sola.</p></div>
+        </div>
+      </article>
+
+      <article class="role-card" data-accent="orange" data-reveal style="--reveal-delay:270ms">
+        <div class="role-card-head">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+          </div>
+          <h3>Familias</h3>
+        </div>
+        <span class="role-underline" aria-hidden="true"></span>
+        <div class="role-compare">
+          <div class="row before"><span class="tag">ANTES</span><p>No tenían forma de saber si el colegio sostenía en el aula lo que prometía en la entrevista.</p></div>
+          <div class="row after"><span class="tag">CON SABIUM</span><p>Forman parte de una institución que puede mostrar, con datos, la propuesta que sostiene.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- Quienes somos                                                 -->
+<!-- ============================================================ -->
+<section class="team" id="quienes-somos">
+  <div class="container">
+    <div class="mission" data-reveal>
+      <p>Sabium lo construyó gente que coordinó áreas, ocupó cargos directivos y armó planificaciones un domingo a la noche. Por eso Sabium no le suma trabajo a la escuela: le devuelve el tiempo que la herramienta equivocada le quitaba.</p>
+    </div>
+
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow eyebrow-navy"><span class="dot"></span>Quiénes somos</span>
+      <h2>Sabemos lo que implica dirigir un colegio, porque lo vivimos.</h2>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card" data-reveal style="--reveal-delay:0ms">
+        <div class="team-avatar">MA</div>
+        <h3>Marina Alfie</h3>
+        <ul>
+          <li>Licenciada en Sistemas de Información</li>
+          <li>Profesora universitaria y de nivel medio</li>
+          <li>Coordinadora del área de Matemática en nivel primario y secundario</li>
+        </ul>
+      </article>
+
+      <article class="team-card" data-reveal style="--reveal-delay:90ms">
+        <div class="team-avatar">BG</div>
+        <h3>Blanca Goyenechea</h3>
+        <ul>
+          <li>Licenciada en Ciencias de la Educación</li>
+          <li>Diplomatura en Gestión Educativa</li>
+          <li>Cargos directivos en escuelas primarias y secundarias</li>
+        </ul>
+      </article>
+
+      <article class="team-card" data-reveal style="--reveal-delay:180ms">
+        <div class="team-avatar">VL</div>
+        <h3>Verónica Ludevid</h3>
+        <ul>
+          <li>Profesora de Educación Preescolar</li>
+          <li>Técnico Superior de Artes Plásticas y Diseño de Proyectos</li>
+          <li>Coordinadora de nivel inicial</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="quote-block" data-reveal>
+      <p class="q1">Imaginamos una institución educativa donde planificar no sea una carga y donde monitorear signifique acompañar, transformando el modo en que las escuelas planifican, evalúan y mejoran su práctica pedagógica.</p>
+      <p class="q2">La profesionalización de la gestión pedagógica no es un gasto: es el resguardo del activo más importante de un colegio, su propuesta educativa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- Contacto                                                       -->
+<!-- ============================================================ -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow eyebrow-coral"><span class="dot"></span>Hablemos</span>
+      <h2>¿Hablamos de la gestión pedagógica en tu institución?</h2>
+      <p>Necesitás más información. Completá el formulario y te contactamos a la brevedad, o escribinos directo por WhatsApp.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form class="contact-form" data-reveal id="contactForm">
+        <div class="login-group">
+          <label for="contactName">Nombre y apellido</label>
+          <input class="login-field" id="contactName" type="text" autocomplete="name">
+        </div>
+        <div class="login-group">
+          <label for="contactInst">Institución</label>
+          <input class="login-field" id="contactInst" type="text" autocomplete="organization">
+        </div>
+        <div class="login-group">
+          <label for="contactEmail">Email</label>
+          <input class="login-field" id="contactEmail" type="email" autocomplete="email">
+        </div>
+        <div class="login-group">
+          <label for="contactMsg">Mensaje</label>
+          <textarea class="login-field" id="contactMsg" rows="4" placeholder="Contanos brevemente tu situación actual"></textarea>
+        </div>
+        <button type="submit" class="btn btn-navy">Enviar mensaje</button>
+        <p class="form-note">Te respondemos a la brevedad, sin dispersarnos por diez canales distintos.</p>
+      </form>
+
+      <div class="wa-card" data-reveal style="--reveal-delay:120ms">
+        <span class="wa-ring r1" aria-hidden="true"></span>
+        <span class="wa-ring r2" aria-hidden="true"></span>
+        <span class="eyebrow eyebrow-on-dark"><span class="dot"></span>¿Querés ver Sabium en vivo?</span>
+        <h3>Una reunión breve de 20 minutos, sin compromiso</h3>
+        <p>Te mostramos en pantalla cómo Sabium ordena lo que hoy está disperso entre archivos, mensajes y memoria de cada docente.</p>
+        <div class="btn-row">
+          <a href="https://wa.me/5491170668346?text=Hola%20Sabium%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn btn-on-navy">Escribinos a nuestro WhatsApp</a>
+          <a href="https://sabium.com.ar" target="_blank" rel="noopener" class="btn btn-outline">www.sabium.com.ar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- Footer                                                        -->
+<!-- ============================================================ -->
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <div class="brand">
+        <div class="brand-mark"><img src="assets/img/isotipo.png" alt=""></div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="assets/img/logo-wordmark.png" alt="Sabium">
+          <span class="brand-tagline">Aulas a un clic</span>
+        </div>
+      </div>
+      <p class="foot-about">Un seguimiento de lo que acontece pedagógicamente en las aulas, en tiempo real, sin dispersión.</p>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/sabiumaulas/" target="_blank" rel="noopener" aria-label="Instagram de Sabium"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.linkedin.com/company/sabiumaulas/" target="_blank" rel="noopener" aria-label="LinkedIn de Sabium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.5 2.4 4.5 5.6V21h-4v-5.6c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.7H9z"/></svg></a>
+        <a href="https://www.facebook.com/people/Sabium-Aulas-a-un-Clic/61587479234696/" target="_blank" rel="noopener" aria-label="Facebook de Sabium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.7h2.6l.4-3h-3v-1.9c0-.9.2-1.5 1.5-1.5h1.6V4.2C16.3 4.1 15.3 4 14.2 4c-2.4 0-4 1.5-4 4.1v2.2H7.6v3h2.6V21z"/></svg></a>
+        <a href="mailto:info@sabium.com.ar" aria-label="Email a Sabium"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Links</h5>
+      <ul class="flinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#por-que">¿Por qué elegir Sabium?</a></li>
+        <li><a href="#comunidad">Comunidad Educativa</a></li>
+        <li><a href="#quienes-somos">Quiénes somos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Suscribirse</h5>
+      <p>Completá tu correo para recibir las últimas novedades.</p>
+      <form class="foot-sub" id="newsletterForm">
+        <label class="visually-hidden" for="newsletterEmail">Email</label>
+        <input type="email" id="newsletterEmail" placeholder="tu@email.com" required>
+        <button type="submit">OK</button>
+      </form>
+    </div>
+  </div>
+  <p class="foot-bottom">Copyright © 2026 Todos los derechos reservados · Sabium</p>
+</footer>
+
+
+<a class="wa-float" href="https://wa.me/5491170668346?text=Hola%20Sabium%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.15 8.15 0 0 1-4.16-1.14l-.3-.18-3.09.83.83-3-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.2 3.7.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28Z"/></svg>
+</a>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js?v=7"></script>
+</body>
+</html>
